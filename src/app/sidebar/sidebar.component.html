@@ -1,0 +1,25 @@
+<div class="sidebar">
+  <div style="display: flex;">
+    <span class="sidebar__btn">Online</span>
+    <span class="sidebar__btn active">All</span>
+  </div>
+  <div class="sidebar__wrap">
+    <div>
+      <a 
+        [routerLink]="['/', user.id]" 
+        *ngFor="let user of (users | async)" 
+        (ngClick)="activateUser(user.id)" 
+        class="bot" 
+      >
+        <div class="bot__img-wrap">
+          <img class="bot__img" src="{{user.logo}}" alt="logo">
+        </div>
+        <div class="bot__info">
+          <p>{{user.name}}</p>
+          <p style="color: #999;">{{user.description}}</p>
+        </div>
+      </a>
+    </div>
+    <input class="sidebar__search" type="text" placeholder="Search..." />
+  </div>
+</div>

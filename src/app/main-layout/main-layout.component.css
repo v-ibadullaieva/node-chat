@@ -1,0 +1,26 @@
+.main-header__wrap {
+  background-color: white;
+  margin-bottom: 20px;
+}
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  background-color: #d7dfe7;
+  border-radius: 2px;
+  margin: 0 40px;
+}
+.main-header {
+  max-width: 100%;
+  margin: 0 40px;
+  padding-top: 25px;
+}
+.main-header__title {
+  font-size: 32px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+.main-wrap {
+  width: 75%;
+  flex-shrink: 0;
+}

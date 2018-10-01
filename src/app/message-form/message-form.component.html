@@ -1,0 +1,18 @@
+<div class="message-field__wrap">
+  <div class="message-field">
+    <div *ngFor="let message of messages">
+      <div class="message" [ngClass]="{income: user.id !== message.to.id}">
+        <div class="message__info">
+          <span style="color: #203245;">{{message.from.name}}</span>
+          <span>4:20 PM</span>
+        </div>
+        <span class="message__text">{{message.content}}</span>
+      </div>
+      <!-- <span class="message-field__txt">user is typing...</span> -->
+    </div>
+  </div>
+  <form class="form" name="messageForm" [formGroup]="messageForm" (ngSubmit)="messageForm.valid && onSubmit()">
+    <input formControlName="messageInput" name="messageInput" class="form__input form-control" type="text" placeholder="Start chatting!" />
+    <button class="form__btn">Send message</button>
+  </form>
+</div>
